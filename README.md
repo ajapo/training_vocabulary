@@ -1,4 +1,4 @@
-# vocaburaly_practice
+# training_vocabulary
 
 A new Flutter project.
 
