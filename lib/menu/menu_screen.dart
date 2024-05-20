@@ -5,13 +5,24 @@ class Menu extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    const data = [
-      Text("item0"),Text("item1"),Text("あああああ"),Text("item3"),Text("item4"),
-    ];
-    return MaterialApp(
-      home: Scaffold(
-        body: ListView(
-            children: data
+    return Scaffold(
+      appBar: AppBar(title: const Text('メニュー')),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            TextButton(
+              child: Text('単語登録'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/touroku');
+              },
+            ),
+            TextButton(
+              child: Text('試験'),
+              onPressed: () {
+                Navigator.pushNamed(context, '/shiken');
+              },
+            ),
+          ],
         ),
       ),
     );
